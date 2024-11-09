@@ -25,12 +25,13 @@ export default async function Preview({ url, desc }: PreviewProps) {
               src={ogImgUrl}
               alt={`Open graph image for ${cleanUrl}`}
               fill={true}
+              className={styles.img}
             />
           </div>
         )}
         <div className={styles.descWrapper}>
-          <h2>{cleanUrl}</h2>
-          <p>{desc}</p>
+          <h2 className={styles.h2}>{cleanUrl}</h2>
+          <p className={styles.p}>{desc}</p>
         </div>
       </a>
     </li>

@@ -16,7 +16,7 @@
   position: relative;
   height: 180px;
 
-  img {
+  .img {
     height: 180px;
     object-fit: cover;
     border-top-left-radius: 8px;
@@ -27,7 +27,7 @@
 .descWrapper {
   padding: 8px 16px;
 
-  h2 {
+  .h2 {
     font-size: 1.125rem;
     font-weight: 900;
     color: var(--background);
@@ -36,7 +36,7 @@
     text-overflow: ellipsis;
   }
 
-  p {
+  .p {
     font-size: 0.875rem;
   }
 }
