@@ -1,94 +1,44 @@
-import Image from "next/image";
+import Preview, { Suggestion } from "@/components/Preview";
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
     <div className={styles.page}>
+      <header className={styles.header}>thinksmall.dev</header>
       <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
+        <p>
+          A showcase of does-one-thing-well websites. See also:{" "}
+          <a href="https://www.petemillspaugh.com/think-small">Think Small</a>.
+        </p>
+        <ul className={styles.ul}>
+          <Preview
+            url="https://pkg-size.dev"
+            desc="Check the size of an npm package before installing."
+          />
+          <Preview
+            url="https://npm.chart.dev"
+            desc="Beautiful, shareable npm package download charts."
+          />
+          <Preview
+            url="https://makeareadme.com"
+            desc="The what, why, who, when, where, and how of READMEs."
+          />
+          <Preview
+            url="https://joshwcomeau.com/operator-lookup"
+            desc="Search a JavaScript operator for an explanation and code example."
+          />
+          {/* <Preview
+            url="https://emoji.supply/kitchen"
+            desc="Combine emojis—great for favicons and custom Slack reactions."
+          /> */}
+          <Suggestion />
+        </ul>
       </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      <footer>
+        The source code for this website is{" "}
+        <a href="https://github.com/pmillspaugh/thinksmall.dev">public</a>.
+        Thanks to Azeem for the{" "}
+        <a href="https://x.com/azeemb_a/status/1855025344514080950">idea</a>.
       </footer>
     </div>
   );
